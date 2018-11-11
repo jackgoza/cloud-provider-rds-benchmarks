@@ -1,0 +1,12 @@
+GCP
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install mysql-server-5.7
+sudo apt-get install sysbench
+
+## check your install is working!!!
+sudo mysql
+exit
+
+CREATE DATABASE sbtest

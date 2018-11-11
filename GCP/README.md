@@ -15,3 +15,8 @@ this prepares your data for running the benchmarking queries
 
 6) Run em for different thread counts: 
 sysbench --db-driver=mysql --mysql-user=${username} --mysql-password=${password} --mysql-host=${host-address} --mysql-db="sbtest" --mysql-ignore-errors=1062,1213 --rand-type=uniform --table_size=${table-size} --threads=${thread-count} /usr/share/sysbench/oltp_read_write.lua run > /your/desired/local/path/GCP-RDS-RW-${thread-count}T
+
+In presentation include details for selection of benchmark, benchmark composition
+steps to install and run
+
+Include documentation for youtube links, github link, everything inside a google doc or a word document
