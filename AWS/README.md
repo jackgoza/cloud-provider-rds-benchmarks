@@ -7,10 +7,10 @@ RDS
 MySQL
 
 1) Get relevant data from AWS RDS config. You'll need:
-	a) public ip address for your GCP RDS (${host-address})
+	a) public ip address for your AWS RDS (${host-address})
 	b) mysql username (unless otherwise configured, root) (${username})
 	c) mysql password (${password})
-2) Find your current IP address (google what's my ip and it should pop up). Go to your GCP Console -> Your RDS service console -> Connections. Under "Public IP" enter your IP address in the "Add network" button. Save your configuration. Your IP address should now appear in "Authorized Networks".
+2) Find your current IP address (google what's my ip and it should pop up). Go to your AWS Console -> Your RDS service console -> Connections. Under "Public IP" enter your IP address in the "Add network" button. Save your configuration. Your IP address should now appear in "Authorized Networks".
 3) you'll need to create a db for your test data. I chose to call mine sbtest. I used a gui SQL client to do so but you could easily use command line.
 4) select a table size. I chose 200k to start with
 5) sysbench --mysql-host=${host-address} --mysql-user=${username} --mysql-password=${password} --mysql-db="sbtest" --db-driver=mysql --table_size=${table-size} /usr/share/sysbench/oltp_read_write.lua prepare 
